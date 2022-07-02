@@ -1,0 +1,14 @@
+# ignore all .cfg files:
+*.cfg
+
+# ignore all .txt files
+*.txt
+
+# but do track requirements.txt
+!requirements.txt
+
+# ignore __pyache__, Include, Lib and Scripts
+__pycache__
+Include
+Lib
+Scripts
