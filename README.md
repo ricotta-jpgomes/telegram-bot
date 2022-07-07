@@ -1,4 +1,4 @@
-# Telegram Bot
+# Telegram Trending Bot
 
 Olá! Se você chegou até aqui, encontrará neste repositório o código para um bot simples que retorna os 10 primeiros trending topics no Twitter do dia. Desenvolvi esse código com as seguintes ferramentas:
 
@@ -12,7 +12,7 @@ Caso tenha clonado o repositório, você tem em seu repositório um arquivo requ
 pip install -r requirements.txt
 ```
 
-Para ter acesso às APIs do Telegram e do Twitter, e permitir que o bot funcione, é necessário obter uma **chave de acesso** para cada uma. Você pode obtê-las [aqui (Telegram)](https://t.me/botfather), e [aqui (Twitter)](https://developer.twitter.com/en). Uma explicação mais detalhada de como os bots no Telegram funcionam do próprio Telegram, [nesse link](https://core.telegram.org/bots).
+Para ter acesso às APIs do Telegram e do Twitter, e permitir que o bot funcione, é necessário obter uma **chave de acesso** para cada uma. Você pode obtê-las [aqui (Telegram)](https://t.me/botfather), e [aqui (Twitter)](https://developer.twitter.com/en). Para uma explicação mais detalhada de como os bots no Telegram funcionam, pode acessar [esse link](https://core.telegram.org/bots).
 
 As chaves de acesso para a Bot API do Telegram e para a API do Twitter, deverão ser substituídas no bot respectivamente **aqui:**
 
