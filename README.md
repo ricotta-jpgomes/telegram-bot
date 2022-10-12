@@ -1,6 +1,6 @@
-# Telegram Bot
+# Telegram Multi Bot
 
-Olá! Se você chegou até aqui, encontrará neste repositório o código para um bot simples que retorna os 10 primeiros trending topics no Twitter do dia. Desenvolvi esse código com as seguintes ferramentas:
+Olá! Se você chegou até aqui, encontrará neste repositório o código para um bot simples que retorna os 10 primeiros trending topics no Twitter do dia ou as estatísticas de um vídeo do YouTube a partir do seu link. Desenvolvi esse código com as seguintes ferramentas:
 
 - [python-telegram-bot](https://python-telegram-bot.org/), para consumo da **bot API** **do Telegram.**
 - [tweepy](https://www.tweepy.org/), para consumo da **API do Twitter.**
@@ -36,7 +36,6 @@ TOKEN = os.environ['telegram_token'] # INSIRA AQUI SUA CHAVE DE API
 **aqui:**
 
 ```python
-# tt_handles.py
 import tweepy
 import json
 import os
