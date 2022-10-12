@@ -1,6 +1,7 @@
 from telegram.ext import Updater, CommandHandler,MessageHandler, Filters
 from handles import start, echo, unknown
 from tt_handles import trends
+from yt_handles import video_stats
 
 from dotenv import load_dotenv
 import os 
@@ -25,6 +26,10 @@ dispatcher.add_handler(echo_handler)
 # Controle para obter os trending topics do Twitter (10 primeiros do dia)
 trends_handler = CommandHandler('trends', trends)
 dispatcher.add_handler(trends_handler)
+
+# Controle para obter os trending topics do Twitter (10 primeiros do dia)
+statistics_handler = CommandHandler('stats', video_stats)
+dispatcher.add_handler(statistics_handler)
 
 # controle para caso o bot não encontre nenhum comando correspondente
 unknown_handler = MessageHandler(Filters.command, unknown)

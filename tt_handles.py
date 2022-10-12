@@ -6,26 +6,19 @@ import os
 from dotenv import load_dotenv
 from datetime import datetime
 
-# RESGATANDO MINHAS CHAVES DE API DO ARQUIVO MEU .env:
+# RESGATANDO MINHAS CHAVES DE API DO ARQUIVO .env:
 load_dotenv()
-
-# CHAVES DE ACESSO À API (OBTENHA AS SUAS AQUI: https://developer.twitter.com/en/docs/twitter-api)
-'''
-API_KEY = os.environ['tt_api_key']
-API_SECRET = os.environ['tt_api_key_secret']
-ACCESS_TOKEN = os.environ['tt_api_accesstoken']
-ACCESS_TOKEN_SECRET = os.environ['tt_api_accesstoken_secret']
-'''
+# TOKEN DE ACESSO À API (OBTENHA O SEU AQUI: https://developer.twitter.com/en/docs/twitter-api)
 BEARER_TOKEN = os.environ['tt_api_bearertoken']
-BRAZIL_WOE_ID = 23424768
+BRAZIL_WOE_ID = 23424768 # WHERE ON EARTH IDENTIFIER PARA BRASIl
  
-def trends(update, context, token=BEARER_TOKEN):
+def trends(update, context, token=BEARER_TOKEN, woe_id=BRAZIL_WOE_ID):
    # REALIZANDO AUTENTICAÇÃO NA API COM AS MINHAS CHAVES DE ACESSO
    auth = tweepy.OAuth2BearerHandler(token)
 
    api = tweepy.API(auth)
    # OBTENDO OS TRENDING TOPICS DO BRASIL ATRAVÉS DE SEU 'WHERE ON EARTH IDENTIFIER'
-   response = api.get_place_trends(BRAZIL_WOE_ID) 
+   response = api.get_place_trends(woe_id) 
    trends = json.loads(json.dumps(response)) # TRANSFORMANDO O RETORNO DA REQUISIÇÃO PARA UMA ESTRUTURA DE DADOS
    # OS DADOS RETORNAM COMO UMA LISTA DE DICIONARIOS.
    # AS INFORMAÇÕES QUE EU PRETENDO EXIBIR NO FINAL SERÃO ARMAZENADAS NA VARIAVEL ABAIXO - output_list:
