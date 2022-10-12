@@ -1,22 +1,27 @@
 # HANDLES DE INTEGRAÇÃO COM OS SERVIÇOS DO TWITTER
 import tweepy
 import json
+import os
 
+from dotenv import load_dotenv
 from datetime import datetime
 
-# CHAVES DE ACESSO À API (OBTENHA AS SUAS AQUI: https://developer.twitter.com/en/docs/twitter-api)
-API_KEY = ''
-API_SECRET = ''
-ACCESS_TOKEN = ''
-ACCESS_TOKEN_SECRET = ''
+# RESGATANDO MINHAS CHAVES DE API DO ARQUIVO MEU .env:
+load_dotenv()
 
+# CHAVES DE ACESSO À API (OBTENHA AS SUAS AQUI: https://developer.twitter.com/en/docs/twitter-api)
+'''
+API_KEY = os.environ['tt_api_key']
+API_SECRET = os.environ['tt_api_key_secret']
+ACCESS_TOKEN = os.environ['tt_api_accesstoken']
+ACCESS_TOKEN_SECRET = os.environ['tt_api_accesstoken_secret']
+'''
+BEARER_TOKEN = os.environ['tt_api_bearertoken']
 BRAZIL_WOE_ID = 23424768
  
-def trends(update, context):
+def trends(update, context, token=BEARER_TOKEN):
    # REALIZANDO AUTENTICAÇÃO NA API COM AS MINHAS CHAVES DE ACESSO
-   auth = tweepy.OAuth1UserHandler(
-   API_KEY, API_SECRET, ACCESS_TOKEN, ACCESS_TOKEN_SECRET
-   )
+   auth = tweepy.OAuth2BearerHandler(token)
 
    api = tweepy.API(auth)
    # OBTENDO OS TRENDING TOPICS DO BRASIL ATRAVÉS DE SEU 'WHERE ON EARTH IDENTIFIER'

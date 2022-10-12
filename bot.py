@@ -2,9 +2,14 @@ from telegram.ext import Updater, CommandHandler,MessageHandler, Filters
 from handles import start, echo, unknown
 from tt_handles import trends
 
+from dotenv import load_dotenv
+import os 
+
+# RESGATANDO MINHA CHAVE DE API DO MEU ARQUIVO .env:
+load_dotenv()
 
 # Chave de acesso a Telegram Bot API. Obtenha a sua aqui: https://t.me/botfather 
-TOKEN = ''
+TOKEN = os.environ['telegram_token']
 
 updater = Updater(TOKEN, use_context=True)
 dispatcher = updater.dispatcher
