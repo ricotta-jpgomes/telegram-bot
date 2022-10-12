@@ -7,8 +7,8 @@
 # but do track requirements.txt:
 !requirements.txt
 
-# ignoe all .env files:
-* .env
+# ignore "credentials.env" file:
+credentials.env
 
 # ignore __pyache__, Include, Lib and Scripts
 __pycache__
