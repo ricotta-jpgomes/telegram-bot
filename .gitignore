@@ -4,8 +4,11 @@
 # ignore all .txt files
 *.txt
 
-# but do track requirements.txt
+# but do track requirements.txt:
 !requirements.txt
+
+# ignoe all .env files:
+* .env
 
 # ignore __pyache__, Include, Lib and Scripts
 __pycache__
