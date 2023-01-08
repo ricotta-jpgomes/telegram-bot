@@ -6,7 +6,7 @@ Olá! Se você chegou até aqui, encontrará neste repositório o código para u
 - [tweepy](https://www.tweepy.org/), para consumo da **API do Twitter.**
 - [Google API Python Client](https://github.com/googleapis/google-api-python-client), para consumo da **YouTube API v3**
 - [datetime](https://docs.python.org/3/library/datetime.html#module-datetime), para **formatação de saídas no formato de data.**
-- [doten](https://pypi.org/project/python-dotenv/) e [os](https://docs.python.org/3/library/os.html), para gerenciamento das **chaves de API**.
+- [dotenv](https://pypi.org/project/python-dotenv/) e [os](https://docs.python.org/3/library/os.html), para gerenciamento das **chaves de API**.
 
 Caso tenha clonado o repositório, você tem em seu repositório um arquivo requirements.txt, com todas as dependências utilizadas nesse projeto, e pode obtê-las de forma rápida para seu ambiente de desenvolvimento com esse comando:
 
